@@ -1,0 +1,48 @@
+{
+  "name": "ments-api",
+  "version": "1.0.0",
+  "description": "MongoDB Express Node TypeScript REST API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sspangsberg/MENTS-API.git"
+  },
+  "author": "smsj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sspangsberg/MENTS-API/issues"
+  },
+  "homepage": "https://github.com/sspangsberg/MENTS-API#readme",
+
+  "nodemonConfig": {
+      "verbose": false,
+      "watch": [
+        "src"
+      ],
+      "ext": "js,ts",
+      "exec": "npx ts-node ./src/index.ts",
+      "ignore": [
+        "node_modules"
+      ]
+  },
+
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv-flow": "^4.1.0",
+    "express": "^4.21.2",
+    "joi": "^17.13.3",
+    "mongodb": "^6.12.0",
+    "mongoose": "^8.9.5",
+    "nodemon": "^3.1.9"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/joi": "^17.2.2",
+    "@types/node": "^22.10.6",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  }
+}
