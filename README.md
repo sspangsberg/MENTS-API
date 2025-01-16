@@ -1,12 +1,9 @@
 # MENTS-API
 
-MongoDB Express Node TypeScript REST API
-
-Follows a layered architecture (parts of 3-layered and MVC).
-
+MongoDB Express Node TypeScript REST API<br/>
 <br/>
-[Videos](https://www.youtube.com/playlist?list=PLJetLDY7yKuqAjvSxAYQzL-TdhAmVHCsj)
+Follows a layered architecture (parts of 3-layered and MVC).<br/>
+[Videos](https://www.youtube.com/playlist?list=PLJetLDY7yKuqAjvSxAYQzL-TdhAmVHCsj)<br/>
 <br/>
-
 <img src="architecture.png">
 
