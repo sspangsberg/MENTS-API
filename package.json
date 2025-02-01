@@ -4,6 +4,7 @@
   "description": "MongoDB Express Node TypeScript REST API",
   "main": "index.js",
   "scripts": {
+    "build": "rm -rf ./dist && tsc",
     "start-dev": "npx nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
