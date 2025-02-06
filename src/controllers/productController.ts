@@ -2,6 +2,7 @@ import { Request, Response } from 'express';
 import { productModel } from '../models/productModel';
 import { connect, disconnect } from '../repository/database';
 
+
 // CRUD - create, read/get, update, delete
 
 /**
