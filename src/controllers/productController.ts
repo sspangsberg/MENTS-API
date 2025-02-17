@@ -65,7 +65,7 @@ export async function getProductById(req: Request, res: Response) {
         await connect();
 
         const id = req.params.id;
-        const result = await productModel.find({ _id: id });
+        const result = await productModel.findById(id);
 
         res.status(200).send(result);
     }
@@ -76,6 +76,38 @@ export async function getProductById(req: Request, res: Response) {
         await disconnect();
     }
 }
+
+
+
+
+
+/**
+ * Retrieves a product by its id from the data sources
+ * @param req 
+ * @param res 
+ */
+export async function getProductsByQuery(req: Request, res: Response) {
+
+    const key = req.params.key;
+    const val = req.params.val;
+
+    try {
+        await connect();
+
+        const result = await productModel.find({ [key]: { $regex: val, $options: 'i' } });
+
+        res.status(200).send(result);
+    }
+    catch (err) {
+        res.status(500).send("Error retrieving products. Error: " + err);
+    }
+    finally {
+        await disconnect();
+    }
+}
+
+
+
 
 
 
@@ -141,9 +173,3 @@ export async function deleteProductById(req: Request, res: Response) {
         await disconnect();
     }
 }
-
-
-
-
-
-

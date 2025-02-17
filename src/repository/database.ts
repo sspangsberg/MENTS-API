@@ -8,7 +8,7 @@ export async function testConnection() {
     try {
         await connect();
         await disconnect();
-        console.log('Database connection test was successful (connect + disconnect)');
+        console.log('Database connection test completed (connect + disconnect)');
     }
     catch (error) {
         console.log('Error testing database connection. Error: ' + error);
@@ -20,8 +20,7 @@ export async function testConnection() {
  * Connect to the database
  */
 export async function connect() {
-    try
-    {
+    try {
         if (!process.env.DBHOST) {
             throw new Error('DBHOST environment variable is not defined');
         }
@@ -29,7 +28,7 @@ export async function connect() {
 
         // ping the server to check if we have a connection
         if (mongoose.connection.db) {
-            await mongoose.connection.db.admin().command({ ping: 1});
+            await mongoose.connection.db.admin().command({ ping: 1 });
             console.log('Connection established');
         }
         else {
