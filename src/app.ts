@@ -4,44 +4,31 @@ import { testConnection } from './repository/database';
 import routes from './routes';
 import cors from 'cors';
 
-
 dotenvFlow.config();
 
 // create express application
 const app: Application = express();
 
-
 /**
- *
+ * Setup CORS handling
  */
-export function setupCors() {
+function setupCors() {
 
-    // kw 2-dec-2024 - Working CORS setup without credentials. Could refactor
-    app.use(
-        cors({
-            origin: "*", // Allow requests from any origin
-            // kw 29-nov-2024 - allow methods + headers + credentials
-            methods: 'GET,HEAD,PUT,OPTIONS,PATCH,POST,DELETE',
-            allowedHeaders: ['auth-token', 'Origin', 'X-Requested-With', 'Content-Type', 'Accept'], // Allow specific headers
-            credentials: true,
-        })
-    );
-    /*
-        // kw 2-dec-2024 - set the Access-Control-Allow-Origin header for preflight requests - console error 
-        app.options('*', (req: Request, res: Response) => {
-            res.header('Access-Control-Allow-Origin', '*');
-            res.header('Access-Control-Allow-Methods', 'GET,HEAD,PUT,OPTIONS,PATCH,POST,DELETE');
-            res.header('Access-Control-Allow-Headers', 'auth-token, Origin, X-Requested-With, Content-Type, Accept');
-            // test for credentials
-            res.header('Access-Control-Allow-Credentials', 'true');
-            res.sendStatus(200);
-        });
-        */
+    app.use(cors({
+
+        // Allow request from any origin
+        origin: "*",
+
+        // allow HTTP methods
+        methods: 'GET, PUT, POST, DELETE',
+
+        // allow headers
+        allowedHeaders: ['auth-token', 'Origin', 'X-Requested-Width', 'Content-Type', 'Accept'],
+
+        // allow credentials
+        credentials:true
+    }))
 }
-
-
-
-
 
 /**
  * 
@@ -49,7 +36,7 @@ export function setupCors() {
 export function startServer() {
 
     setupCors();
-
+    
     // JSON body parser
     app.use(express.json());
 
