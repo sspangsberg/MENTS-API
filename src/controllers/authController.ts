@@ -55,7 +55,7 @@ export async function registerUser(req: Request, res: Response) {
         });
 
         const savedUser = await userObject.save();
-        res.status(200).json({ error: null, data: savedUser._id });
+        res.status(201).json({ error: null, data: savedUser._id });
 
     } catch (error) {
         res.status(500).send("Error registrering user. Error: " + error);

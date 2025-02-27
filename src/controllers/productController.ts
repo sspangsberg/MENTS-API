@@ -114,7 +114,7 @@ export async function getProductsByQuery(req: Request, res: Response) {
 
 
 /**
- * Retrieves a product by its id from the data sources
+ * Updates the product by id
  * @param req 
  * @param res 
  */
