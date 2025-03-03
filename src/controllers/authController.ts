@@ -43,11 +43,12 @@ export async function registerUser(req: Request, res: Response) {
         }
 
 
-        // hash the password
+        
         const salt = await bcrypt.genSalt(10);
         const passwordHashed = await bcrypt.hash(req.body.password, salt);
 
-        // create a user object and save in the DB
+
+
         const userObject = new userModel({
             name: req.body.name,
             email: req.body.email,

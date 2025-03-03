@@ -6,8 +6,7 @@
   "scripts": {
     "build": "rm -rf ./dist && tsc",
     "start-dev": "npx nodemon",
-    "localdb": "npx nodemon",
-    "remotedb": "npx nodemon",
+    "seed": "npx ts-node ./src/util/dataSeeder.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
