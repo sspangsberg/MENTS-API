@@ -1,11 +1,11 @@
 import { Router, Request, Response } from 'express';
 import {
-    createProduct,
-    getAllProducts,
-    getProductById,
-    updateProductById,
-    deleteProductById,
-    getProductsByQuery
+  createProduct,
+  getAllProducts,
+  getProductById,
+  updateProductById,
+  deleteProductById,
+  getProductsByQuery
 } from './controllers/productController';
 import { loginUser, registerUser, verifyToken } from './controllers/authController';
 
@@ -25,7 +25,7 @@ const router: Router = Router();
  *         description: Server up and running.
  */
 router.get('/', (req: Request, res: Response) => {
-    res.status(200).send('Welcome to the MENTS API');
+  res.status(200).send('Welcome to the MENTS API');
 });
 
 // auth
