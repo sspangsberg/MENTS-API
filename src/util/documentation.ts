@@ -12,9 +12,9 @@ export function setupDocs(app: Application) {
   const swaggerDefinition = {
     openapi: '3.0.0',
     info: {
-      title: 'Title',
+      title: 'MENTS-API',
       version: '1.0.0',
-      description: 'Description',
+      description: 'MongoDB Express Node TypeScript REST API',
     },
     servers: [
       {
