@@ -11,10 +11,10 @@ export default tseslint.config(
       '@stylistic': stylistic
     },
     rules: {
-      '@stylistic/indent': ['error', 2],  
+      '@stylistic/indent': ['error', 2],
       // ...
     },
-  } , 
+  },
   {
     ignores: [
       'node_modules/',
