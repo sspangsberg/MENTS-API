@@ -8,7 +8,8 @@
     "start-dev": "cross-env NODE_ENV=development npx nodemon",
     "lint": "npx eslint",
     "seed": "npx ts-node ./src/util/dataSeeder.ts",
-    "testdb": "cross-env NODE_ENV=test npx ts-node ./src/index.ts"
+    "testdb": "cross-env NODE_ENV=test npx ts-node ./src/index.ts",
+    "test": "npx playwright test --reporter=list"
   },
   "repository": {
     "type": "git",
