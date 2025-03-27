@@ -20,6 +20,10 @@ export function setupDocs(app: Application) {
       {
         url: 'http://localhost:4000/api/',
         description: 'Local development server',
+      },
+      {
+        url: 'https://ments-api-kex4.onrender.com/api/',
+        description: 'Remote development server',
       }
     ],
     components: {
