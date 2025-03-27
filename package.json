@@ -6,6 +6,7 @@
   "scripts": {
     "build": "rm -rf ./dist && tsc",
     "start-dev": "cross-env NODE_ENV=development npx nodemon",
+    "start-local": "cross-env NODE_ENV=local npx nodemon",
     "lint": "npx eslint",
     "seed": "npx ts-node ./src/util/dataSeeder.ts",
     "testdb": "cross-env NODE_ENV=test npx ts-node ./src/index.ts",
