@@ -31,7 +31,6 @@ router.get('/', (req: Request, res: Response) => {
 })
 
 
-
 /**
  * @swagger
  * /start-cron:
@@ -49,7 +48,6 @@ router.get('/', (req: Request, res: Response) => {
  *               type: array               
  */
 router.get('/start-cron', startCron);
-
 
 /**
 * @swagger
