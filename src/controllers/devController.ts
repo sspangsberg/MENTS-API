@@ -7,8 +7,8 @@ import cron, { ScheduledTask } from "node-cron";
 import https from "https";
 
 // Settings
-const TOTAL_DURATION_MINUTES = 15; // Total "keep-remote-server-alive" duration 
-const MINUTES_DELTA = 1; // How often should we ping the server
+const TOTAL_DURATION_MINUTES = 60; // Total "keep-remote-server-alive" duration 
+const MINUTES_DELTA = 5; // How often should we ping the server
 const cronPattern = "*/" + MINUTES_DELTA + " * * * *"; // Docs here: https://crontab.guru/#*/5_*_*_*_*
 const URL = "https://ments-api-kex4.onrender.com/api/";
 let counter = 0;
